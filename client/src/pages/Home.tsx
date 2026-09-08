@@ -5,10 +5,12 @@ import CodeProjects from "../components/CodeProjects/CodeProjects";
 import UIUXProjects from "../components/UIUX Projects/UIUXProjects";
 import Skills from "../components/Skills/Skills";
 import Contact from "../components/Contact/Contact";
+import Particles from "../components/Shared/Particles";
 
 const Home = () => {
   return (
     <>
+      <Particles></Particles>
       <Navbar></Navbar>
       <TitlePage></TitlePage>
       <About></About>

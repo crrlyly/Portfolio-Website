@@ -1,7 +1,23 @@
 import CircleGlow from "../Shared/CircleGlow";
+import { useState, useEffect } from "react";
 const Navbar = () => {
+
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
   return (
-    <div className="fixed top-0 left-0 w-full h-auto flex justify-between items-center p-5 z-9999">
+    <div className={`fixed top-0 left-0 w-full h-auto flex justify-between items-center p-5 z-9999 bg-transparent
+    ${scrollY > 0 ? "transition-colors duration-1000 ease-in-out bg-[#120817]/30 backdrop-blur-2xl border-b border-pink-200/30" : ""}`}>
       <div className="w-auto h-full flex items-center ">
         <CircleGlow></CircleGlow>
         <h1 className="font-bold text-white text-[1.2rem] [text-shadow:0_0_1px_#fccee8] lg:text-[.9rem]">
