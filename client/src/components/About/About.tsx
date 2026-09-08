@@ -44,7 +44,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full h-100 lg:h-full rounded-5xl md:w-100 self-center mb-50">
+        <div className="w-full h-100 lg:h-full rounded-5xl md:w-100 self-center mb-50 justify-self-center">
           <img
             src={Me}
             alt="A picture of myself"
