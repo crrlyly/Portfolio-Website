@@ -1,6 +1,19 @@
+import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { getCSProjects } from "../../services/projectsAPI";
+import type { Project } from "../../services/projectsAPI";
 
 const CodeProjects = () => {
+  const [csProjects, setCSProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    async function loadCSProjects() {
+      const data = await getCSProjects();
+      setCSProjects(data);
+    }
+    loadCSProjects();
+  }, []);
+
   return (
     <section className="w-full h-auto bg-[#120817] py-40 lg:py-20">
       <div className="ml-5 mb-10">
@@ -12,9 +25,9 @@ const CodeProjects = () => {
         </span>
       </div>
       <div className="mt-5 flex gap-5 overflow-x-auto pl-5">
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
+        {csProjects.map((project) => (
+          <ProjectCard key={project.projId} project={project}></ProjectCard>
+        ))}
       </div>
     </section>
   );

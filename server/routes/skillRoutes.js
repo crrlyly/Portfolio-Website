@@ -1,0 +1,1 @@
+import {getSkills} from "../controllers/skillController.js"
