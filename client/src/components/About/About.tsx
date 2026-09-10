@@ -20,7 +20,21 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="relative w-full h-auto flex flex-col py-30 px-5 bg-[#120817] lg:items-center lg:pb-0">
+    <div
+      id="about"
+      className="relative
+    w-full
+    overflow-x-clip
+    flex
+    flex-col
+    justify-center
+    items-center
+    py-30
+    px-5
+    bg-[#120817]
+    lg:items-center
+    lg:pb-0"
+    >
       <h1
         className="absolute top-0 right-0 text-transparent [-webkit-text-stroke:2px_pink] opacity-10  
        uppercase text-[20vw] leading-none"
@@ -28,7 +42,7 @@ const About = () => {
         about
       </h1>
 
-      <div className="lg:h-auto lg:flex lg:w-[70%] items-center justify-center">
+      <div className="w-full lg:h-auto lg:flex lg:w-[70%] lg:items-center lg:justify-center">
         <div className="lg:w-[70%] lg:mr-20">
           <h1 className="saira-condensed-light mb-7 text-pink-300 text-[.75rem] uppercase tracking-[.3em] md:text-[.8rem]">
             // 01 - The Maker
@@ -68,7 +82,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative w-full max-w-90 h-100 rounded-5xl md:max-w-120 lg:max-w-150 self-center mb-50 justify-self-center">
+        <div className="relative w-full max-w-80 h-100 mx-auto rounded-5xl md:max-w-120 lg:max-w-150 mb-50">
           <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -top-10 -left-7.5 bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
             4+{" "}
             <span className="block text-[.7rem] uppercase font-light">
