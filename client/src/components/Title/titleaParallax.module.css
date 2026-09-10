@@ -1,0 +1,24 @@
+@keyframes titleParallax {
+    from {
+        opacity: 0;
+        transform: translateY(80px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.titleTitle {
+  animation: titleParallax 0.8s ease-out forwards;
+}
+
+.titleTitle2 {
+  
+  animation: titleParallax 0.8s ease-out .5s forwards;
+}
+
+.subtitle{
+    opacity: 0;
+  animation: titleParallax 0.8s ease-out .7s forwards;
+}

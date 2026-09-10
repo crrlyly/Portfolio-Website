@@ -73,6 +73,10 @@ body,
   background: #120817;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overscroll-behavior-x: none;
 }

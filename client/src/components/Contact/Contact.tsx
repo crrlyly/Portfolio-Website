@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="w-full h-auto bg-[#120817] md:py-40 py-10 px-5 flex justify-center items-center">
+    <section id="contact" className="w-full h-auto bg-[#120817] md:py-40 py-10 px-5 flex justify-center items-center">
       <div className=" w-full h-auto flex flex-col items-center max-w-300 ">
         <h1
           className=" text-pink-300 uppercase tracking-[.4em] mb-10 
@@ -28,7 +28,7 @@ const Contact = () => {
             Say Hi
           </a>
         </div>
-        <div className="animate-jump text-[1.2rem] mb-15 mt-10 text-purple-300 text-center flex items-center md:text-2xl font-bold">
+        <div id="resume" className="animate-jump text-[1.2rem] mb-15 mt-10 text-purple-300 text-center flex items-center md:text-2xl font-bold">
           Download Resume Here:
           <a
             href="/Carly-Resume.pdf"

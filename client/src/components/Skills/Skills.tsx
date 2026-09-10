@@ -55,7 +55,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="w-full h-auto bg-[#120817] py-40">
+    <section id="skills" className="w-full h-auto bg-[#120817] py-40">
       <div className="ml-5 mb-20 w-full h-auto">
         <h1 className="saira-condensed-light mb-7 text-pink-300 text-[.75rem] uppercase tracking-[.3em] md:text-[.8rem]">
           // 04 - Toolkit

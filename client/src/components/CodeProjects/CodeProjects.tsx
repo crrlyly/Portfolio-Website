@@ -19,7 +19,7 @@ const CodeProjects = () => {
   }, []);
 
   return (
-    <section className="w-full h-auto bg-[#120817] py-40 lg:py-20">
+    <section id="work" className="w-full h-auto bg-[#120817] py-40 lg:py-20">
       <div className="ml-5 mb-10">
         <h1 className="saira-condensed-light mb-7 text-pink-300 text-[.75rem] uppercase tracking-[.3em] md:text-[.8rem]">
           // 02 - Selected Work

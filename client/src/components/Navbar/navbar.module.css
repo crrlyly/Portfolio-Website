@@ -1,0 +1,13 @@
+@keyframes fromAbove{
+    from{
+        transform: translateY(-70px) 
+    }
+    to{
+        transform: translateY(0px) 
+    }
+}
+
+.nav{
+    transform: translateY(-70px);
+    animation: fromAbove .8s ease-out .7s forwards;
+}

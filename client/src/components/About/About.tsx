@@ -20,7 +20,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-auto flex flex-col py-30 px-5 bg-[#120817] lg:items-center lg:pb-0">
+    <div id="about" className="relative w-full h-auto flex flex-col py-30 px-5 bg-[#120817] lg:items-center lg:pb-0">
       <h1
         className="absolute top-0 right-0 text-transparent [-webkit-text-stroke:2px_pink] opacity-10  
        uppercase text-[20vw] leading-none"
