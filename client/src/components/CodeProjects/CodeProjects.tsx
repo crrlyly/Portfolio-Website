@@ -8,8 +8,12 @@ const CodeProjects = () => {
 
   useEffect(() => {
     async function loadCSProjects() {
-      const data = await getCSProjects();
-      setCSProjects(data);
+      try {
+        const data = await getCSProjects();
+        setCSProjects(data);
+      } catch (error) {
+        console.error("Failed to load CS Projects: ", error)
+      }
     }
     loadCSProjects();
   }, []);

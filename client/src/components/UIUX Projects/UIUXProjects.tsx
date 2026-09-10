@@ -8,8 +8,12 @@ const UIUXProjects = () => {
 
   useEffect(() => {
     async function loadUIUXProjects() {
-      const data = await getUIUXProjects();
-      setUIUXProjects(data);
+      try {
+        const data = await getUIUXProjects();
+        setUIUXProjects(data);
+      } catch (error) {
+        console.error("Failed to load UIUX Projects: ", error);
+      }
     }
     loadUIUXProjects();
   }, []);

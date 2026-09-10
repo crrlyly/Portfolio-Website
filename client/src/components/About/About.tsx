@@ -9,8 +9,12 @@ const About = () => {
 
   useEffect(() => {
     async function loadLanguages() {
-      const data = await getLanguages();
-      setLanguages(data);
+      try {
+        const data = await getLanguages();
+        setLanguages(data);
+      } catch (error) {
+        console.error("Failed to load languages:", error);
+      }
     }
     loadLanguages();
   }, []);
@@ -65,10 +69,31 @@ const About = () => {
         </div>
 
         <div className="relative w-full max-w-90 h-100 rounded-5xl md:max-w-120 lg:max-w-150 self-center mb-50 justify-self-center">
-          <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 top-[-40px] left-[-30px] bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">4+ <span className="block text-[.7rem] uppercase font-light">years crafting</span></div>
-          <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-l-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 top-[-40px] right-[-30px]  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">10 <span className="block text-[.7rem] uppercase font-light">design rewards</span></div>
-          <div className="backdrop-blur-[3px] border border-t-pink-200/20 border-l-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 bottom-[-40px] right-[-30px]  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">10 <span className="block text-[.7rem] uppercase font-light">cups of coffee</span></div>
-          <div className="backdrop-blur-[3px] border border-t-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 bottom-[-40px] left-[-30px]  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">10 <span className="block text-[.7rem] uppercase font-light"> projects</span></div>
+          <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -top-10 -left-7.5 bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
+            4+{" "}
+            <span className="block text-[.7rem] uppercase font-light">
+              years crafting
+            </span>
+          </div>
+          <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-l-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -top-10 -right-7.5  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
+            10{" "}
+            <span className="block text-[.7rem] uppercase font-light">
+              design rewards
+            </span>
+          </div>
+          <div className="backdrop-blur-[3px] border border-t-pink-200/20 border-l-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -bottom-10 -right-7.5  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
+            10{" "}
+            <span className="block text-[.7rem] uppercase font-light">
+              cups of coffee
+            </span>
+          </div>
+          <div className="backdrop-blur-[3px] border border-t-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -bottom-10 -left-7.5  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
+            10{" "}
+            <span className="block text-[.7rem] uppercase font-light">
+              {" "}
+              projects
+            </span>
+          </div>
           <img
             src={Me}
             alt="A picture of myself"

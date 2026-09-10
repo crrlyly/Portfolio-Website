@@ -17,20 +17,36 @@ const Skills = () => {
 
   useEffect(() => {
     async function loadLanguages() {
-      const data = await getLanguages();
-      setLanguages(data);
+      try {
+        const data = await getLanguages();
+        setLanguages(data);
+      } catch (error) {
+        console.error("Failed to load languages: ", error)
+      }
     }
     async function loadFrameworks() {
-      const data = await getFrameworks();
-      setFrameworks(data);
+      try {
+        const data = await getFrameworks();
+        setFrameworks(data);
+      } catch (error) {
+        console.error("Failed to load frameworks: ", error)
+      }
     }
     async function loadDesigns() {
-      const data = await getDesigns();
-      setDesigns(data);
+      try {
+        const data = await getDesigns();
+        setDesigns(data);
+      } catch (error) {
+        console.error("Failed to load designs: ", error)
+      }
     }
     async function loadTools() {
-      const data = await getTools();
-      setTools(data);
+      try {
+        const data = await getTools();
+        setTools(data);
+      } catch (error) {
+        console.error("Failed to load tools: ", error)
+      }
     }
     loadLanguages();
     loadFrameworks();
