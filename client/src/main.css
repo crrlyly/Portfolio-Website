@@ -166,3 +166,24 @@ body {
 .half-border-bottom:hover::after {
   width: 100%;
 }
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Background behind scrollbar */
+::-webkit-scrollbar-track {
+  background: #120817;
+}
+
+/* The draggable scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #ffd0ea;
+  border-radius: 10px;
+}
+
+/* When hovering scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #f899cd;
+}

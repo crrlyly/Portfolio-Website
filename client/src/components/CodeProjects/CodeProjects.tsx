@@ -32,8 +32,9 @@ const CodeProjects = () => {
             scroll to explore →
           </span>
         </div>
+       
       </div>
-      <div className="mt-5 flex gap-5 overflow-x-auto pl-5">
+      <div className="transform-[rotateX(180deg)] pb-5 mt-5 flex gap-5 overflow-x-auto overflow-y-hidden pl-5">
         {csProjects.map((project, index) => (
           <ProjectCard
             key={project.projId}

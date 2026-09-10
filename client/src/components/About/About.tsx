@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Me from "../../assets/me.jpg";
 import SkillRep from "../Shared/SkillRep";
 import type { Skill } from "../../services/skillsAPI";
 import { getLanguages } from "../../services/skillsAPI";
+import styles from "./about.module.css";
 
 const About = () => {
   const [languages, setLanguages] = useState<Skill[]>([]);
+  const [visible, setVisible] = useState(false);
+
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     async function loadLanguages() {
@@ -17,10 +21,30 @@ const About = () => {
       }
     }
     loadLanguages();
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      {
+        threshold: 0.3,
+      },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <div
+      ref={sectionRef}
       id="about"
       className="relative
     w-full
@@ -42,8 +66,14 @@ const About = () => {
         about
       </h1>
 
-      <div className="w-full lg:h-auto lg:flex lg:w-[70%] lg:items-center lg:justify-center">
-        <div className="lg:w-[70%] lg:mr-20">
+      <div
+        className={`w-full lg:h-auto lg:flex lg:w-[70%] lg:items-center
+       lg:justify-center`}
+      >
+        <div
+          className={`${styles.animateTarget}
+    ${visible ? styles.leftParralax : ""} lg:w-[70%] lg:mr-20`}
+        >
           <h1 className="saira-condensed-light mb-7 text-pink-300 text-[.75rem] uppercase tracking-[.3em] md:text-[.8rem]">
             // 01 - The Maker
           </h1>
@@ -82,7 +112,9 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative w-full max-w-80 h-100 mx-auto rounded-5xl md:max-w-120 lg:max-w-150 mb-50">
+        <div className={`${styles.animateTarget2}
+    ${visible ? styles.underParralax : ""} relative w-full max-w-80 h-100 mx-auto rounded-5xl md:max-w-120 
+        lg:max-w-150 mb-50`}>
           <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -top-10 -left-7.5 bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
             4+{" "}
             <span className="block text-[.7rem] uppercase font-light">
