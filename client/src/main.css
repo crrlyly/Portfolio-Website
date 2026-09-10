@@ -1,6 +1,6 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@import "tailwindcss";
 
 .saira-condensed-thin {
   font-family: "Saira Condensed", sans-serif;
@@ -55,7 +55,6 @@
   font-weight: 900;
   font-style: normal;
 }
-
 
 *,
 ::after,
@@ -166,7 +165,6 @@ body {
 .half-border-bottom:hover::after {
   width: 100%;
 }
-
 
 ::-webkit-scrollbar {
   width: 8px;
