@@ -1,7 +1,66 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*, ::after, ::before{
-    box-sizing: border-box;
+
+.saira-condensed-thin {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.saira-condensed-extralight {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.saira-condensed-light {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.saira-condensed-regular {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.saira-condensed-medium {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.saira-condensed-semibold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.saira-condensed-bold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.saira-condensed-extrabold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.saira-condensed-black {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 html,
@@ -38,7 +97,6 @@ body {
   animation: pulse-ring 1s ease-out infinite;
 }
 
-
 @keyframes particleFloat {
   0% {
     opacity: 0;
@@ -69,3 +127,38 @@ body {
     0 0 15px rgba(255, 100, 200, 0.6);
 }
 
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-jump {
+  animation: jump 1s ease-in infinite;
+}
+
+.half-border-bottom {
+  position: relative; /* Required so the absolute pseudo-element lines up */
+}
+
+.half-border-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+  background: pink; /* This acts as your border-color */
+  transition: width 300ms;
+}
+
+.half-border-bottom:hover::after {
+  width: 100%;
+}

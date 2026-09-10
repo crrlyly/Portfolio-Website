@@ -24,19 +24,19 @@ const TitlePage = () => {
       }}
       className="flex h-dvh w-full flex-col items-center justify-around relative"
     >
-      <div className="absolute top-[15%] left-1/2 -translate-x-1/2 text-[16vw] font-bold uppercase text-transparent [-webkit-text-stroke:2px_pink] opacity-10 scale-y-130 scale-x-105">
+      <div className="saira-condensed-bold z-20 absolute top-[10%] left-1/2 -translate-x-1/2 text-[16vw] font-bold uppercase text-transparent [-webkit-text-stroke:2px_pink] opacity-10 scale-y-110 scale-x-90">
         portfolio
       </div>
 
       <div></div>
 
-      <h2 className="text-center text-3xl md:text-5xl font-bold uppercase text-green-200 lg:text-8xl">
+      <h2 className="z-10 saira-condensed-bold text-center text-4xl md:text-5xl font-bold uppercase text-green-200 opacity-60 lg:text-8xl">
         Architecting{" "}
         <span className="block text-pink-300 [text-shadow:0_0_20px_#b8476f]">Digital Emotion</span>
       </h2>
 
-      <p className="font-light uppercase tracking-widest text-pink-200 md:tracking-[.3em]">
-        Creative Developer &middot; UI/UX Designer
+      <p className="text-[.7rem] saira-condensed-light uppercase tracking-widest text-pink-200 md:tracking-[.3em]">
+        Frontend developer &middot; UI/UX Designer
       </p>
     </main>
   );

@@ -30,7 +30,7 @@ const Particles = () => {
   }, []);
 
   return (
-    <div className="pointer-events-none inset-0 overflow-hidden z-40 fixed top-0 ">
+    <div className="pointer-events-none inset-0 overflow-hidden z-40 fixed top-0 opacity-30">
       {particles.map((particle) => (
         <div
           key={particle.id}

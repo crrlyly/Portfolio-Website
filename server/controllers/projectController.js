@@ -10,7 +10,7 @@ async function getCSProjects(req, res) {
   }
 }
 
-async function getUIUXProjects() {
+async function getUIUXProjects(req, res) {
   try {
     const [rows] = await db.query("SELECT * from projects where type = 'UIUX' ");
     res.json(rows);
