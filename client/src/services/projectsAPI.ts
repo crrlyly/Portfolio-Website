@@ -9,7 +9,7 @@ export interface Project {
 }
 
 export async function getCSProjects(): Promise<Project[]> {
-  const res = await fetch(`${API_URL}/projects/CS`);
+  const res = await fetch(`${API_URL}/api/projects/CS`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch CS projects");
@@ -19,7 +19,7 @@ export async function getCSProjects(): Promise<Project[]> {
 }
 
 export async function getUIUXProjects(): Promise<Project[]> {
-  const res = await fetch(`${API_URL}/projects/UIUX`);
+  const res = await fetch(`${API_URL}/api/projects/UIUX`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch UIUX projects");
