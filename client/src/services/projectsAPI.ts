@@ -1,4 +1,4 @@
-const API_URL = "http://192.168.1.154:3000/api/projects";
+const API_URL = import.meta.env.API_URL;
 
 export interface Project {
   projId: number;
@@ -9,7 +9,7 @@ export interface Project {
 }
 
 export async function getCSProjects(): Promise<Project[]> {
-  const res = await fetch(`${API_URL}/CS`);
+  const res = await fetch(`${API_URL}/projects/CS`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch CS projects");
@@ -19,7 +19,7 @@ export async function getCSProjects(): Promise<Project[]> {
 }
 
 export async function getUIUXProjects(): Promise<Project[]> {
-  const res = await fetch(`${API_URL}/UIUX`);
+  const res = await fetch(`${API_URL}/projects/UIUX`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch UIUX projects");

@@ -1,4 +1,4 @@
-const API_URL = "http://192.168.1.154:3000/api/skills";
+const API_URL = import.meta.env.API_URL;
 
 export interface Skill {
   skillsId: number;
@@ -7,28 +7,28 @@ export interface Skill {
 }
 
 export async function getLanguages(): Promise<Skill[]> {
-  const res = await fetch(`${API_URL}/languages`);
+  const res = await fetch(`${API_URL}/skills/languages`);
   if (!res.ok) {
     throw new Error("Failed to fetch language skills");
   }
   return res.json();
 }
 export async function getFrameworks(): Promise<Skill[]> {
-  const res = await fetch(`${API_URL}/frameworks`);
+  const res = await fetch(`${API_URL}/skills/frameworks`);
   if (!res.ok) {
     throw new Error("Failed to fetch framework skills");
   }
   return res.json();
 }
 export async function getDesigns(): Promise<Skill[]> {
-  const res = await fetch(`${API_URL}/designs`);
+  const res = await fetch(`${API_URL}/skills/designs`);
   if (!res.ok) {
     throw new Error("Failed to fetch design skills");
   }
   return res.json();
 }
 export async function getTools(): Promise<Skill[]> {
-  const res = await fetch(`${API_URL}/tools`);
+  const res = await fetch(`${API_URL}/skills/tools`);
   if (!res.ok) {
     throw new Error("Failed to fetch tools");
   }
