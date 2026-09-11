@@ -12,10 +12,27 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/projects", projectRoutes);
-app.use("/api/skills", skillRoutes)
+app.use("/api/skills", skillRoutes);
 
 app.get("/", (req, res) => {
   res.send("Portfolio API is running!");
+});
+
+app.get("/db-test", async (req, res) => {
+  try {
+    const [rows] = await db.query("SELECT 1 AS test");
+    res.json({
+      connected: true,
+      result: rows,
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      connected: false,
+      error: error.message,
+    });
+  }
 });
 
 app.listen(PORT, () => {
