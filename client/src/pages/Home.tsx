@@ -6,11 +6,13 @@ import UIUXProjects from "../components/UIUX Projects/UIUXProjects";
 import Skills from "../components/Skills/Skills";
 import Contact from "../components/Contact/Contact";
 import Particles from "../components/Shared/Particles";
+import Chatbox from "../components/Chatbox/Chatbox";
 
 const Home = () => {
   return (
     <>
       <Particles></Particles>
+      <Chatbox></Chatbox>
       <Navbar></Navbar>
       <TitlePage></TitlePage>
       <About></About>

@@ -5,6 +5,7 @@ import db from "./config/db.js";
 
 import projectRoutes from "./routes/projectRoutes.js";
 import skillRoutes from "./routes/skillRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/api/projects", projectRoutes);
 app.use("/api/skills", skillRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.get("/", (req, res) => {
   res.send("Portfolio API is running!");

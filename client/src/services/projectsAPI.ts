@@ -1,6 +1,6 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
-console.log("VITE_API_URL =", API_URL);
+// const stagingURL = "http://localhost:3000";
 
 export interface Project {
   projId: number;
