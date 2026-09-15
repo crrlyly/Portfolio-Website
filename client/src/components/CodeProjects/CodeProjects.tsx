@@ -28,9 +28,9 @@ const CodeProjects = () => {
           <span className="text-4xl font-bold text-white md:text-6xl ">
             The Project Matrix
           </span>
-          <span className="hidden md:block text-pink-200 mr-5">
+          {/* <span className="hidden md:block text-pink-200 mr-5">
             scroll to explore →
-          </span>
+          </span> */}
         </div>
        
       </div>

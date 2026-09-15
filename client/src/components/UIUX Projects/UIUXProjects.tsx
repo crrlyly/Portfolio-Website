@@ -33,6 +33,7 @@ const UIUXProjects = () => {
         >
           Crafted Interfaces
         </span>
+        <span className="text-pink-200 mt-5 block text-[.9rem] lg:text-[1rem]"><span className="hidden lg:inline">Hover to read more info.</span> Click to see project on Github.</span>
       </div>
       <div className="mt-3 flex flex-col items-center justify-center gap-5 pl-5">
         {UIUXProjects.map((project) => (

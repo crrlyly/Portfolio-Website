@@ -8,6 +8,7 @@ export interface Project {
   name: string;
   year: number;
   description: string;
+  link: string;
 }
 
 export async function getCSProjects(): Promise<Project[]> {
