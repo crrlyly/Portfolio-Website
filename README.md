@@ -31,6 +31,8 @@ The React frontend sends the conversation to my Express API, which communicates 
 
 The conversation history is limited before being sent to the model to keep requests lightweight and focused.
 
+Note: The AI assistant is currently available only on my home network because the Ollama language model is hosted locally on my personal computer. Visitors accessing the portfolio from outside my home network will not be able to use this feature.
+
 ### Chat Architecture
 
 React Client
