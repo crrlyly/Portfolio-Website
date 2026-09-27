@@ -8,8 +8,7 @@ interface Message {
 const startingMessage: Message = {
   role: "assistant",
   content:
-    // "Hi there! ✨ I'm Carly's little helper. Ask me anything about her work, skills, or projects!",
-    "Hi there! Right now my model is offline and can only work with my local IP address. I will update it later.",
+    "Hi there! ✨ I'm Carly's little helper. Ask me anything about her work, skills, or projects!",
 };
 
 const Chatbox = () => {
@@ -31,11 +30,19 @@ const Chatbox = () => {
       content: question,
     };
 
-    const updatedMessages = [...messages, userMessage];
+    const placeholder: Message = {
+      role: "assistant",
+      content: "Sorry I'm offline right now.",
+    };
+
+    const updatedMessages = [...messages, userMessage, placeholder];
 
     setMessages(updatedMessages);
     setInput("");
-    setLoading(true);
+    // setLoading(true);
+    setLoading(false);
+
+    return;
 
     try {
       const response = await fetch(`${API_URL}/api/chat`, {
