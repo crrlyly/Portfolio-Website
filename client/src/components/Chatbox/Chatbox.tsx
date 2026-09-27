@@ -8,7 +8,8 @@ interface Message {
 const startingMessage: Message = {
   role: "assistant",
   content:
-    "Hi there! ✨ I'm Carly's little helper. Ask me anything about her work, skills, or projects!",
+    // "Hi there! ✨ I'm Carly's little helper. Ask me anything about her work, skills, or projects!",
+    "Hi there! Right now my model is offline and can only work with my local IP address. I will update it later.",
 };
 
 const Chatbox = () => {
