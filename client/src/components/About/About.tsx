@@ -122,7 +122,7 @@ const About = () => {
             </span>
           </div>
           <div className="backdrop-blur-[3px] border border-b-pink-200/20 border-l-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -top-10 -right-7.5  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
-            10{" "}
+            2{" "}
             <span className="block text-[.7rem] uppercase font-light">
               design rewards
             </span>
