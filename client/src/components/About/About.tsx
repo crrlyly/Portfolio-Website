@@ -85,7 +85,7 @@ const About = () => {
           </span>
 
           <p className="mt-7 mb-7 text-[1.2rem] text-pink-200">
-            I'm Carly — a frontend developer and UI/UX designer based in Cherry
+            I'm Carly, a frontend developer and UI/UX designer based in Cherry
             Hill, NJ, and a recent Rutgers–New Brunswick graduate with a double
             major in Computer Science and Information Technology.
           </p>
@@ -134,7 +134,7 @@ const About = () => {
             </span>
           </div>
           <div className="backdrop-blur-[3px] border border-t-pink-200/20 border-r-pink-200/20 rounded-3xl z-20 absolute text-pink-300 w-35 h-20 -bottom-10 -left-7.5  bg-[#120817]/70 flex flex-col justify-center pl-4 text-2xl font-bold">
-            10{" "}
+            8{" "}
             <span className="block text-[.7rem] uppercase font-light">
               {" "}
               projects
